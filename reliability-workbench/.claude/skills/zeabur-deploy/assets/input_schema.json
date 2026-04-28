@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "zeabur-deploy input",
+  "type": "object",
+  "required": ["action"],
+  "properties": {
+    "action": {
+      "type": "string",
+      "enum": ["deploy", "logs", "status", "restart", "auth-check",
+                "list-projects", "list-services"]
+    },
+    "service_name": {"type": "string"},
+    "project_name": {"type": "string"},
+    "env_id": {"type": ["string", "null"]},
+    "log_type": {"type": "string", "enum": ["runtime", "build"], "default": "runtime"},
+    "tail_lines": {"type": "integer", "minimum": 10, "maximum": 5000, "default": 200},
+    "max_runtime_s": {"type": "integer", "minimum": 10, "maximum": 1800, "default": 300}
+  }
+}
