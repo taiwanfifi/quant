@@ -126,6 +126,7 @@ def main():
     prompt = PROMPT.format(seeds_summary=summarize_seeds(seeds), n=args.n)
 
     print(f"Generating {args.n} adversarial cases via Gemini cookies...")
+    gemini_cookies.reset_session()  # fresh session avoids stale conv_id parse errors
     t0 = time.time()
     text, tin, tout, _raw = gemini_cookies.call(
         messages=[{"role": "user", "content": prompt}],

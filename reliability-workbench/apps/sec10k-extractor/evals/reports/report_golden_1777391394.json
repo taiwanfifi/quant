@@ -1,0 +1,145 @@
+{
+  "suite": "golden",
+  "rules_only": false,
+  "n_cases": 4,
+  "n_ok": 4,
+  "accuracy_avg": 1.0,
+  "cost_total_usd": 0.0,
+  "elapsed_total_ms": 234065,
+  "by_scenario": {
+    "modern_healthy": {
+      "total": 3,
+      "ok": 3,
+      "case_ids": [
+        "AAPL_2025",
+        "KO_2026",
+        "MSFT_2025"
+      ]
+    },
+    "modern_large": {
+      "total": 1,
+      "ok": 1,
+      "case_ids": [
+        "JPM_2026"
+      ]
+    }
+  },
+  "results": [
+    {
+      "case_id": "AAPL_2025",
+      "metadata": {
+        "industry": "tech",
+        "year": 2025,
+        "format": "iXBRL",
+        "scenario": "modern_healthy",
+        "primary_doc": "aapl-20250927.htm"
+      },
+      "scores": {
+        "inv_form_type_present": 1.0,
+        "inv_items_unique": 1.0,
+        "inv_spec_fields_present": 1.0,
+        "inv_status_distribution_sums": 1.0,
+        "items_count_in_range": 1.0,
+        "accuracy": 1.0
+      },
+      "primary": 1.0,
+      "n_items": 23,
+      "cost_usd": 0.0,
+      "elapsed_ms": 70547,
+      "confidence": 1.0,
+      "expected": {
+        "items_count_min": 20,
+        "items_count_max": 25,
+        "form_type": "10-K"
+      },
+      "form_type": "10-K"
+    },
+    {
+      "case_id": "JPM_2026",
+      "metadata": {
+        "industry": "bank",
+        "year": 2026,
+        "format": "iXBRL",
+        "scenario": "modern_large",
+        "primary_doc": "jpm-20251231.htm"
+      },
+      "scores": {
+        "inv_form_type_present": 1.0,
+        "inv_items_unique": 1.0,
+        "inv_spec_fields_present": 1.0,
+        "inv_status_distribution_sums": 1.0,
+        "items_count_in_range": 1.0,
+        "accuracy": 1.0
+      },
+      "primary": 1.0,
+      "n_items": 22,
+      "cost_usd": 0.0,
+      "elapsed_ms": 22878,
+      "confidence": 0.0,
+      "expected": {
+        "items_count_min": 20,
+        "items_count_max": 25,
+        "form_type": "10-K"
+      },
+      "form_type": "10-K"
+    },
+    {
+      "case_id": "KO_2026",
+      "metadata": {
+        "industry": "consumer",
+        "year": 2026,
+        "format": "iXBRL",
+        "scenario": "modern_healthy",
+        "primary_doc": "ko-20251231.htm"
+      },
+      "scores": {
+        "inv_form_type_present": 1.0,
+        "inv_items_unique": 1.0,
+        "inv_spec_fields_present": 1.0,
+        "inv_status_distribution_sums": 1.0,
+        "items_count_in_range": 1.0,
+        "accuracy": 1.0
+      },
+      "primary": 1.0,
+      "n_items": 23,
+      "cost_usd": 0.0,
+      "elapsed_ms": 7797,
+      "confidence": 0.0,
+      "expected": {
+        "items_count_min": 20,
+        "items_count_max": 25,
+        "form_type": "10-K"
+      },
+      "form_type": "10-K"
+    },
+    {
+      "case_id": "MSFT_2025",
+      "metadata": {
+        "industry": "tech",
+        "year": 2025,
+        "format": "iXBRL",
+        "scenario": "modern_healthy",
+        "primary_doc": "msft-20250630.htm"
+      },
+      "scores": {
+        "inv_form_type_present": 1.0,
+        "inv_items_unique": 1.0,
+        "inv_spec_fields_present": 1.0,
+        "inv_status_distribution_sums": 1.0,
+        "items_count_in_range": 1.0,
+        "accuracy": 1.0
+      },
+      "primary": 1.0,
+      "n_items": 23,
+      "cost_usd": 0.0,
+      "elapsed_ms": 132842,
+      "confidence": 1.0,
+      "expected": {
+        "items_count_min": 20,
+        "items_count_max": 25,
+        "form_type": "10-K"
+      },
+      "form_type": "10-K"
+    }
+  ]
+}
