@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "browse-execute-task input",
+  "type": "object",
+  "required": ["task"],
+  "properties": {
+    "task": {"type": "string", "minLength": 5, "maxLength": 5000},
+    "site_hint": {"type": ["string", "null"]},
+    "max_steps": {"type": "integer", "minimum": 1, "maximum": 100, "default": 20},
+    "max_runtime_s": {"type": "integer", "minimum": 10, "maximum": 600, "default": 240},
+    "model_preference": {
+      "type": "string",
+      "enum": ["auto", "gemini", "claude", "claude-haiku-4-5", "claude-sonnet-4-6"],
+      "default": "gemini"
+    },
+    "headless": {"type": "boolean", "default": true},
+    "absolute_deadline_unix": {"type": ["number", "null"]}
+  }
+}
