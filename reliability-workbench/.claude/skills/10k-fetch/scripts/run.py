@@ -128,6 +128,11 @@ def fetch_via_accession(cik: str, accession: str, *,
         return _err("accession_not_found",
                     f"accession {accession} not found in submissions for CIK {cik}")
 
+    # 1990s historical filings often have empty primaryDocument in submissions API.
+    # Fall back to <accession>.txt convention (the canonical full submission text).
+    if not primary or not primary.strip():
+        primary = f"{accession}.txt"
+
     # 2. Build URL and download
     acc_clean = accession.replace("-", "")
     primary_url = f"https://www.sec.gov/Archives/edgar/data/{cik_int}/{acc_clean}/{primary}"

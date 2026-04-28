@@ -1,0 +1,439 @@
+{
+  "suite": "golden",
+  "rules_only": true,
+  "n_cases": 18,
+  "n_ok": 10,
+  "accuracy_avg": 1.0,
+  "cost_total_usd": 0.0,
+  "elapsed_total_ms": 254312,
+  "by_scenario": {
+    "modern_healthy": {
+      "total": 7,
+      "ok": 7,
+      "case_ids": [
+        "AAPL_2025",
+        "KO_2026",
+        "MSFT_2025",
+        "NVDA_2026",
+        "T_2026",
+        "WMT_2026",
+        "XOM_2026"
+      ]
+    },
+    "modern_large": {
+      "total": 2,
+      "ok": 2,
+      "case_ids": [
+        "BRK-A_2026",
+        "JPM_2026"
+      ]
+    },
+    "html_entity_quirk": {
+      "total": 1,
+      "ok": 1,
+      "case_ids": [
+        "PFE_2026"
+      ]
+    },
+    "historical_envelope": {
+      "total": 7,
+      "ok": 0,
+      "case_ids": [
+        "F_1995",
+        "F_1999",
+        "IBM_1997",
+        "IBM_1999",
+        "JPM_1997",
+        "KO_1998",
+        "KO_1999"
+      ]
+    },
+    "amendment_exhibit_only": {
+      "total": 1,
+      "ok": 0,
+      "case_ids": [
+        "JPM_1999_A"
+      ]
+    }
+  },
+  "results": [
+    {
+      "case_id": "AAPL_2025",
+      "metadata": {
+        "industry": "tech",
+        "year": 2025,
+        "format": "iXBRL",
+        "scenario": "modern_healthy",
+        "primary_doc": "aapl-20250927.htm"
+      },
+      "scores": {
+        "inv_form_type_present": 1.0,
+        "inv_items_unique": 1.0,
+        "inv_spec_fields_present": 1.0,
+        "inv_status_distribution_sums": 0.0,
+        "items_count_in_range": 1.0,
+        "accuracy": 1.0
+      },
+      "primary": 1.0,
+      "n_items": 23,
+      "cost_usd": 0.0,
+      "elapsed_ms": 778,
+      "confidence": 1.0,
+      "expected": {
+        "items_count_min": 20,
+        "items_count_max": 25,
+        "form_type": "10-K"
+      },
+      "form_type": "10-K"
+    },
+    {
+      "case_id": "BRK-A_2026",
+      "metadata": {
+        "industry": "complex-conglomerate",
+        "year": 2026,
+        "format": "iXBRL",
+        "scenario": "modern_large",
+        "primary_doc": "brka-20251231.htm"
+      },
+      "scores": {
+        "inv_form_type_present": 0.0,
+        "inv_items_unique": 1.0,
+        "inv_spec_fields_present": 1.0,
+        "inv_status_distribution_sums": 0.0,
+        "items_count_in_range": 1.0,
+        "accuracy": 1.0
+      },
+      "primary": 1.0,
+      "n_items": 22,
+      "cost_usd": 0.0,
+      "elapsed_ms": 6106,
+      "confidence": 1.0,
+      "expected": {
+        "items_count_min": 20,
+        "items_count_max": 25,
+        "form_type": "10-K"
+      },
+      "form_type": null
+    },
+    {
+      "case_id": "JPM_2026",
+      "metadata": {
+        "industry": "bank",
+        "year": 2026,
+        "format": "iXBRL",
+        "scenario": "modern_large",
+        "primary_doc": "jpm-20251231.htm"
+      },
+      "scores": {
+        "inv_form_type_present": 0.0,
+        "inv_items_unique": 1.0,
+        "inv_spec_fields_present": 1.0,
+        "inv_status_distribution_sums": 0.0,
+        "items_count_in_range": 1.0,
+        "accuracy": 1.0
+      },
+      "primary": 1.0,
+      "n_items": 22,
+      "cost_usd": 0.0,
+      "elapsed_ms": 8493,
+      "confidence": 1.0,
+      "expected": {
+        "items_count_min": 20,
+        "items_count_max": 25,
+        "form_type": "10-K"
+      },
+      "form_type": null
+    },
+    {
+      "case_id": "KO_2026",
+      "metadata": {
+        "industry": "consumer",
+        "year": 2026,
+        "format": "iXBRL",
+        "scenario": "modern_healthy",
+        "primary_doc": "ko-20251231.htm"
+      },
+      "scores": {
+        "inv_form_type_present": 0.0,
+        "inv_items_unique": 1.0,
+        "inv_spec_fields_present": 1.0,
+        "inv_status_distribution_sums": 0.0,
+        "items_count_in_range": 1.0,
+        "accuracy": 1.0
+      },
+      "primary": 1.0,
+      "n_items": 23,
+      "cost_usd": 0.0,
+      "elapsed_ms": 2735,
+      "confidence": 1.0,
+      "expected": {
+        "items_count_min": 20,
+        "items_count_max": 25,
+        "form_type": "10-K"
+      },
+      "form_type": null
+    },
+    {
+      "case_id": "MSFT_2025",
+      "metadata": {
+        "industry": "tech",
+        "year": 2025,
+        "format": "iXBRL",
+        "scenario": "modern_healthy",
+        "primary_doc": "msft-20250630.htm"
+      },
+      "scores": {
+        "inv_form_type_present": 0.0,
+        "inv_items_unique": 1.0,
+        "inv_spec_fields_present": 1.0,
+        "inv_status_distribution_sums": 0.0,
+        "items_count_in_range": 1.0,
+        "accuracy": 1.0
+      },
+      "primary": 1.0,
+      "n_items": 23,
+      "cost_usd": 0.0,
+      "elapsed_ms": 3729,
+      "confidence": 1.0,
+      "expected": {
+        "items_count_min": 20,
+        "items_count_max": 25,
+        "form_type": "10-K"
+      },
+      "form_type": null
+    },
+    {
+      "case_id": "NVDA_2026",
+      "metadata": {
+        "industry": "tech-recent-iXBRL",
+        "year": 2026,
+        "format": "iXBRL",
+        "scenario": "modern_healthy",
+        "primary_doc": "nvda-20260125.htm"
+      },
+      "scores": {
+        "inv_form_type_present": 1.0,
+        "inv_items_unique": 1.0,
+        "inv_spec_fields_present": 1.0,
+        "inv_status_distribution_sums": 0.0,
+        "items_count_in_range": 1.0,
+        "accuracy": 1.0
+      },
+      "primary": 1.0,
+      "n_items": 23,
+      "cost_usd": 0.0,
+      "elapsed_ms": 2864,
+      "confidence": 1.0,
+      "expected": {
+        "items_count_min": 20,
+        "items_count_max": 25,
+        "form_type": "10-K"
+      },
+      "form_type": "10-K"
+    },
+    {
+      "case_id": "PFE_2026",
+      "metadata": {
+        "industry": "pharma",
+        "year": 2026,
+        "format": "iXBRL",
+        "scenario": "html_entity_quirk",
+        "primary_doc": "pfe-20251231.htm"
+      },
+      "scores": {
+        "inv_form_type_present": 0.0,
+        "inv_items_unique": 1.0,
+        "inv_spec_fields_present": 1.0,
+        "inv_status_distribution_sums": 0.0,
+        "items_count_in_range": 1.0,
+        "accuracy": 1.0
+      },
+      "primary": 1.0,
+      "n_items": 23,
+      "cost_usd": 0.0,
+      "elapsed_ms": 2841,
+      "confidence": 1.0,
+      "expected": {
+        "items_count_min": 20,
+        "items_count_max": 25,
+        "form_type": "10-K"
+      },
+      "form_type": null
+    },
+    {
+      "case_id": "T_2026",
+      "metadata": {
+        "industry": "telecom",
+        "year": 2026,
+        "format": "iXBRL",
+        "scenario": "modern_healthy",
+        "primary_doc": "t-20251231.htm"
+      },
+      "scores": {
+        "inv_form_type_present": 0.0,
+        "inv_items_unique": 1.0,
+        "inv_spec_fields_present": 1.0,
+        "inv_status_distribution_sums": 0.0,
+        "items_count_in_range": 1.0,
+        "accuracy": 1.0
+      },
+      "primary": 1.0,
+      "n_items": 23,
+      "cost_usd": 0.0,
+      "elapsed_ms": 2833,
+      "confidence": 1.0,
+      "expected": {
+        "items_count_min": 20,
+        "items_count_max": 25,
+        "form_type": "10-K"
+      },
+      "form_type": null
+    },
+    {
+      "case_id": "WMT_2026",
+      "metadata": {
+        "industry": "retail",
+        "year": 2026,
+        "format": "iXBRL",
+        "scenario": "modern_healthy",
+        "primary_doc": "wmt-20260131.htm"
+      },
+      "scores": {
+        "inv_form_type_present": 1.0,
+        "inv_items_unique": 1.0,
+        "inv_spec_fields_present": 1.0,
+        "inv_status_distribution_sums": 0.0,
+        "items_count_in_range": 1.0,
+        "accuracy": 1.0
+      },
+      "primary": 1.0,
+      "n_items": 23,
+      "cost_usd": 0.0,
+      "elapsed_ms": 1997,
+      "confidence": 1.0,
+      "expected": {
+        "items_count_min": 20,
+        "items_count_max": 25,
+        "form_type": "10-K"
+      },
+      "form_type": "10-K"
+    },
+    {
+      "case_id": "XOM_2026",
+      "metadata": {
+        "industry": "energy",
+        "year": 2026,
+        "format": "iXBRL",
+        "scenario": "modern_healthy",
+        "primary_doc": "xom-20251231.htm"
+      },
+      "scores": {
+        "inv_form_type_present": 0.0,
+        "inv_items_unique": 1.0,
+        "inv_spec_fields_present": 1.0,
+        "inv_status_distribution_sums": 0.0,
+        "items_count_in_range": 1.0,
+        "accuracy": 1.0
+      },
+      "primary": 1.0,
+      "n_items": 22,
+      "cost_usd": 0.0,
+      "elapsed_ms": 3412,
+      "confidence": 1.0,
+      "expected": {
+        "items_count_min": 20,
+        "items_count_max": 25,
+        "form_type": "10-K"
+      },
+      "form_type": null
+    },
+    {
+      "case_id": "F_1995",
+      "error": "10k-fetch exited 1: Traceback (most recent call last):\n  File \"/Users/william/Downloads/quant/reliability-workbench/.claude/skills/10k-fetch/scripts/run.py\", line 259, in <module>\n    main()\n  File \"/Users/william/Downloads/quant/reliability-workbench/.claude/skills/10k-fetch/scripts/run.py\", line 247, in main\n    out = fetch_via_accession(inputs[\"cik\"], inputs[\"accession\"],\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/william/Downloads/quant/reliability-workbench/.claude/skills/",
+      "metadata": {
+        "industry": "auto-historical",
+        "year": 1995,
+        "format": "PEM-SGML",
+        "scenario": "historical_envelope",
+        "primary_doc": "0000950124-95-000729.txt"
+      }
+    },
+    {
+      "case_id": "F_1999",
+      "error": "10k-fetch exited 1: Traceback (most recent call last):\n  File \"/Users/william/Downloads/quant/reliability-workbench/.claude/skills/10k-fetch/scripts/run.py\", line 259, in <module>\n    main()\n  File \"/Users/william/Downloads/quant/reliability-workbench/.claude/skills/10k-fetch/scripts/run.py\", line 247, in main\n    out = fetch_via_accession(inputs[\"cik\"], inputs[\"accession\"],\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/william/Downloads/quant/reliability-workbench/.claude/skills/",
+      "metadata": {
+        "industry": "auto-historical",
+        "year": 1999,
+        "format": "PEM-SGML",
+        "scenario": "historical_envelope",
+        "primary_doc": "0000037996-99-000009.txt"
+      }
+    },
+    {
+      "case_id": "IBM_1997",
+      "error": "10k-fetch exited 1: Traceback (most recent call last):\n  File \"/Users/william/Downloads/quant/reliability-workbench/.claude/skills/10k-fetch/scripts/run.py\", line 259, in <module>\n    main()\n  File \"/Users/william/Downloads/quant/reliability-workbench/.claude/skills/10k-fetch/scripts/run.py\", line 247, in main\n    out = fetch_via_accession(inputs[\"cik\"], inputs[\"accession\"],\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/william/Downloads/quant/reliability-workbench/.claude/skills/",
+      "metadata": {
+        "industry": "tech-historical",
+        "year": 1997,
+        "format": "PEM-SGML",
+        "scenario": "historical_envelope",
+        "primary_doc": "0000912057-97-010483.txt"
+      }
+    },
+    {
+      "case_id": "IBM_1999",
+      "error": "10k-fetch exited 1: Traceback (most recent call last):\n  File \"/Users/william/Downloads/quant/reliability-workbench/.claude/skills/10k-fetch/scripts/run.py\", line 259, in <module>\n    main()\n  File \"/Users/william/Downloads/quant/reliability-workbench/.claude/skills/10k-fetch/scripts/run.py\", line 247, in main\n    out = fetch_via_accession(inputs[\"cik\"], inputs[\"accession\"],\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/william/Downloads/quant/reliability-workbench/.claude/skills/",
+      "metadata": {
+        "industry": "tech-historical",
+        "year": 1999,
+        "format": "PEM-SGML",
+        "scenario": "historical_envelope",
+        "primary_doc": "0001047469-99-011848.txt"
+      }
+    },
+    {
+      "case_id": "JPM_1997",
+      "error": "10k-fetch exited 1: Traceback (most recent call last):\n  File \"/Users/william/Downloads/quant/reliability-workbench/.claude/skills/10k-fetch/scripts/run.py\", line 259, in <module>\n    main()\n  File \"/Users/william/Downloads/quant/reliability-workbench/.claude/skills/10k-fetch/scripts/run.py\", line 247, in main\n    out = fetch_via_accession(inputs[\"cik\"], inputs[\"accession\"],\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/william/Downloads/quant/reliability-workbench/.claude/skills/",
+      "metadata": {
+        "industry": "bank-historical",
+        "year": 1997,
+        "format": "PEM-SGML",
+        "scenario": "historical_envelope",
+        "primary_doc": "0000950123-97-002412.txt"
+      }
+    },
+    {
+      "case_id": "JPM_1999_A",
+      "error": "10k-fetch exited 1: Traceback (most recent call last):\n  File \"/Users/william/Downloads/quant/reliability-workbench/.claude/skills/10k-fetch/scripts/run.py\", line 259, in <module>\n    main()\n  File \"/Users/william/Downloads/quant/reliability-workbench/.claude/skills/10k-fetch/scripts/run.py\", line 247, in main\n    out = fetch_via_accession(inputs[\"cik\"], inputs[\"accession\"],\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/william/Downloads/quant/reliability-workbench/.claude/skills/",
+      "metadata": {
+        "industry": "bank-historical",
+        "year": 1999,
+        "format": "PEM-SGML",
+        "scenario": "amendment_exhibit_only",
+        "primary_doc": "0000950123-99-006055.txt"
+      }
+    },
+    {
+      "case_id": "KO_1998",
+      "error": "10k-fetch exited 1: Traceback (most recent call last):\n  File \"/Users/william/Downloads/quant/reliability-workbench/.claude/skills/10k-fetch/scripts/run.py\", line 259, in <module>\n    main()\n  File \"/Users/william/Downloads/quant/reliability-workbench/.claude/skills/10k-fetch/scripts/run.py\", line 247, in main\n    out = fetch_via_accession(inputs[\"cik\"], inputs[\"accession\"],\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/william/Downloads/quant/reliability-workbench/.claude/skills/",
+      "metadata": {
+        "industry": "consumer-historical",
+        "year": 1998,
+        "format": "PEM-SGML",
+        "scenario": "historical_envelope",
+        "primary_doc": "0000021344-98-000004.txt"
+      }
+    },
+    {
+      "case_id": "KO_1999",
+      "error": "10k-fetch exited 1: Traceback (most recent call last):\n  File \"/Users/william/Downloads/quant/reliability-workbench/.claude/skills/10k-fetch/scripts/run.py\", line 259, in <module>\n    main()\n  File \"/Users/william/Downloads/quant/reliability-workbench/.claude/skills/10k-fetch/scripts/run.py\", line 247, in main\n    out = fetch_via_accession(inputs[\"cik\"], inputs[\"accession\"],\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/william/Downloads/quant/reliability-workbench/.claude/skills/",
+      "metadata": {
+        "industry": "consumer-historical",
+        "year": 1999,
+        "format": "PEM-SGML",
+        "scenario": "historical_envelope",
+        "primary_doc": "0000021344-99-000005.txt"
+      }
+    }
+  ]
+}

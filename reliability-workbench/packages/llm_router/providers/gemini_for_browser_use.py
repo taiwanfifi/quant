@@ -34,6 +34,7 @@ class ChatGeminiCookies:
     """
     def __init__(self, *, model: str = "gemini-3-flash", reset_each_call: bool = False):
         self.model = model
+        self.model_name = model            # browser-use checks .model_name in cloud_events
         self._reset_each_call = reset_each_call
 
     @property
