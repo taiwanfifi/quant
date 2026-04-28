@@ -16,20 +16,20 @@
 
   <header class="mb-8 border-b pb-6">
     <h1 class="text-3xl font-bold text-gray-900">Reliability Workbench — Eval Report</h1>
-    <p class="text-gray-600 mt-2">Suite: <span class="font-mono">golden</span> · Generated: 2026-04-28 15:50 UTC</p>
-    <p class="text-sm text-gray-500 mt-1">Mode: full pipeline (rules + LLM Tier B + IBR resolve)</p>
+    <p class="text-gray-600 mt-2">Suite: <span class="font-mono">adversarial</span> · Generated: 2026-04-28 15:52 UTC</p>
+    <p class="text-sm text-gray-500 mt-1">Mode: rules-only (Tier A only — no LLM calls)</p>
   </header>
 
   <!-- KPIs -->
   <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
     <div class="bg-white p-5 rounded-lg shadow border-l-4 border-emerald-500">
       <div class="text-xs uppercase tracking-wider text-gray-500">Cases</div>
-      <div class="text-2xl font-bold mt-1">4/4</div>
-      <div class="text-xs text-gray-400">100% succeeded</div>
+      <div class="text-2xl font-bold mt-1">1/6</div>
+      <div class="text-xs text-gray-400">17% succeeded</div>
     </div>
     <div class="bg-white p-5 rounded-lg shadow border-l-4 border-blue-500">
       <div class="text-xs uppercase tracking-wider text-gray-500">Accuracy</div>
-      <div class="text-2xl font-bold mt-1">100.0%</div>
+      <div class="text-2xl font-bold mt-1">0.0%</div>
       <div class="text-xs text-gray-400">items_count_in_range avg</div>
     </div>
     <div class="bg-white p-5 rounded-lg shadow border-l-4 border-amber-500">
@@ -39,8 +39,8 @@
     </div>
     <div class="bg-white p-5 rounded-lg shadow border-l-4 border-purple-500">
       <div class="text-xs uppercase tracking-wider text-gray-500">Total Time</div>
-      <div class="text-2xl font-bold mt-1">234.1s</div>
-      <div class="text-xs text-gray-400">58.52s/case avg</div>
+      <div class="text-2xl font-bold mt-1">9.8s</div>
+      <div class="text-xs text-gray-400">1.64s/case avg</div>
     </div>
   </div>
 
@@ -60,20 +60,56 @@
       <tbody class="divide-y">
         
           <tr>
-            <td class="px-4 py-2 font-medium scenario-pass rounded">modern_healthy</td>
-            <td class="px-4 py-2 text-right font-mono">3</td>
-            <td class="px-4 py-2 text-right font-mono">3</td>
-            <td class="px-4 py-2 text-right font-mono">100%</td>
-            <td class="px-4 py-2 text-gray-600 text-xs">AAPL_2025, KO_2026, MSFT_2025</td>
+            <td class="px-4 py-2 font-medium scenario-fail rounded">pre-modern-sgml-plaintext</td>
+            <td class="px-4 py-2 text-right font-mono">0</td>
+            <td class="px-4 py-2 text-right font-mono">1</td>
+            <td class="px-4 py-2 text-right font-mono">0%</td>
+            <td class="px-4 py-2 text-gray-600 text-xs">ADV_LEGACY_SGML_ENVELOPE</td>
           </tr>
         
 
           <tr>
-            <td class="px-4 py-2 font-medium scenario-pass rounded">modern_large</td>
+            <td class="px-4 py-2 font-medium scenario-fail rounded">incorporate-by-reference-to-ars</td>
+            <td class="px-4 py-2 text-right font-mono">0</td>
             <td class="px-4 py-2 text-right font-mono">1</td>
+            <td class="px-4 py-2 text-right font-mono">0%</td>
+            <td class="px-4 py-2 text-gray-600 text-xs">ADV_EXTERNAL_REF_GHOST</td>
+          </tr>
+        
+
+          <tr>
+            <td class="px-4 py-2 font-medium scenario-fail rounded">post-2021-item-6-reserved</td>
+            <td class="px-4 py-2 text-right font-mono">0</td>
             <td class="px-4 py-2 text-right font-mono">1</td>
-            <td class="px-4 py-2 text-right font-mono">100%</td>
-            <td class="px-4 py-2 text-gray-600 text-xs">JPM_2026</td>
+            <td class="px-4 py-2 text-right font-mono">0%</td>
+            <td class="px-4 py-2 text-gray-600 text-xs">ADV_ITEM6_RESERVED_QUIRK</td>
+          </tr>
+        
+
+          <tr>
+            <td class="px-4 py-2 font-medium scenario-fail rounded">html-nbsp-encoded-whitespace</td>
+            <td class="px-4 py-2 text-right font-mono">0</td>
+            <td class="px-4 py-2 text-right font-mono">1</td>
+            <td class="px-4 py-2 text-right font-mono">0%</td>
+            <td class="px-4 py-2 text-gray-600 text-xs">ADV_NBSP_ENTITY_FLOOD</td>
+          </tr>
+        
+
+          <tr>
+            <td class="px-4 py-2 font-medium scenario-fail rounded">non-standard-item-headings</td>
+            <td class="px-4 py-2 text-right font-mono">0</td>
+            <td class="px-4 py-2 text-right font-mono">1</td>
+            <td class="px-4 py-2 text-right font-mono">0%</td>
+            <td class="px-4 py-2 text-gray-600 text-xs">ADV_NON_STD_TITLES</td>
+          </tr>
+        
+
+          <tr>
+            <td class="px-4 py-2 font-medium scenario-fail rounded">item-9c-foreign-inspection-disclosure</td>
+            <td class="px-4 py-2 text-right font-mono">0</td>
+            <td class="px-4 py-2 text-right font-mono">1</td>
+            <td class="px-4 py-2 text-right font-mono">0%</td>
+            <td class="px-4 py-2 text-gray-600 text-xs">ADV_HFCAA_INSPECTION_9C</td>
           </tr>
         
       </tbody>
@@ -98,51 +134,50 @@
       </thead>
       <tbody class="divide-y">
         
-              <tr class="">
-                <td class="px-4 py-2 font-mono font-medium">AAPL_2025</td>
-                <td class="px-4 py-2 text-xs text-gray-500">modern_healthy</td>
-                <td class="px-4 py-2 text-right font-mono">23</td>
-                <td class="px-4 py-2 text-right font-mono text-emerald-600">1.00</td>
-                <td class="px-4 py-2 text-right font-mono">1.00</td>
+              <tr class="bg-amber-50">
+                <td class="px-4 py-2 font-mono font-medium">ADV_LEGACY_SGML_ENVELOPE</td>
+                <td class="px-4 py-2 text-xs text-gray-500">pre-modern-sgml-plaintext</td>
+                <td class="px-4 py-2 text-right font-mono">3</td>
+                <td class="px-4 py-2 text-right font-mono text-amber-600">0.00</td>
+                <td class="px-4 py-2 text-right font-mono">0.50</td>
                 <td class="px-4 py-2 text-right font-mono">$0.0000</td>
-                <td class="px-4 py-2 text-right font-mono">70547ms</td>
-                <td class="px-4 py-2 font-mono">10-K</td>
+                <td class="px-4 py-2 text-right font-mono">2547ms</td>
+                <td class="px-4 py-2 font-mono">10-Q</td>
               </tr>
             
 
-              <tr class="">
-                <td class="px-4 py-2 font-mono font-medium">JPM_2026</td>
-                <td class="px-4 py-2 text-xs text-gray-500">modern_large</td>
-                <td class="px-4 py-2 text-right font-mono">22</td>
-                <td class="px-4 py-2 text-right font-mono text-emerald-600">1.00</td>
-                <td class="px-4 py-2 text-right font-mono">0.00</td>
-                <td class="px-4 py-2 text-right font-mono">$0.0000</td>
-                <td class="px-4 py-2 text-right font-mono">22878ms</td>
-                <td class="px-4 py-2 font-mono">10-K</td>
+              <tr class="bg-red-50">
+                <td class="px-4 py-2 font-mono">ADV_EXTERNAL_REF_GHOST</td>
+                <td class="px-4 py-2 text-xs text-gray-500">incorporate-by-reference-to-ars</td>
+                <td colspan="6" class="px-4 py-2 text-red-700 text-xs">ERROR: 10k-fetch exited 1: </td>
               </tr>
             
 
-              <tr class="">
-                <td class="px-4 py-2 font-mono font-medium">KO_2026</td>
-                <td class="px-4 py-2 text-xs text-gray-500">modern_healthy</td>
-                <td class="px-4 py-2 text-right font-mono">23</td>
-                <td class="px-4 py-2 text-right font-mono text-emerald-600">1.00</td>
-                <td class="px-4 py-2 text-right font-mono">0.00</td>
-                <td class="px-4 py-2 text-right font-mono">$0.0000</td>
-                <td class="px-4 py-2 text-right font-mono">7797ms</td>
-                <td class="px-4 py-2 font-mono">10-K</td>
+              <tr class="bg-red-50">
+                <td class="px-4 py-2 font-mono">ADV_ITEM6_RESERVED_QUIRK</td>
+                <td class="px-4 py-2 text-xs text-gray-500">post-2021-item-6-reserved</td>
+                <td colspan="6" class="px-4 py-2 text-red-700 text-xs">ERROR: 10k-fetch exited 1: </td>
               </tr>
             
 
-              <tr class="">
-                <td class="px-4 py-2 font-mono font-medium">MSFT_2025</td>
-                <td class="px-4 py-2 text-xs text-gray-500">modern_healthy</td>
-                <td class="px-4 py-2 text-right font-mono">23</td>
-                <td class="px-4 py-2 text-right font-mono text-emerald-600">1.00</td>
-                <td class="px-4 py-2 text-right font-mono">1.00</td>
-                <td class="px-4 py-2 text-right font-mono">$0.0000</td>
-                <td class="px-4 py-2 text-right font-mono">132842ms</td>
-                <td class="px-4 py-2 font-mono">10-K</td>
+              <tr class="bg-red-50">
+                <td class="px-4 py-2 font-mono">ADV_NBSP_ENTITY_FLOOD</td>
+                <td class="px-4 py-2 text-xs text-gray-500">html-nbsp-encoded-whitespace</td>
+                <td colspan="6" class="px-4 py-2 text-red-700 text-xs">ERROR: 10k-fetch exited 1: </td>
+              </tr>
+            
+
+              <tr class="bg-red-50">
+                <td class="px-4 py-2 font-mono">ADV_NON_STD_TITLES</td>
+                <td class="px-4 py-2 text-xs text-gray-500">non-standard-item-headings</td>
+                <td colspan="6" class="px-4 py-2 text-red-700 text-xs">ERROR: 10k-fetch exited 1: </td>
+              </tr>
+            
+
+              <tr class="bg-red-50">
+                <td class="px-4 py-2 font-mono">ADV_HFCAA_INSPECTION_9C</td>
+                <td class="px-4 py-2 text-xs text-gray-500">item-9c-foreign-inspection-disclosure</td>
+                <td colspan="6" class="px-4 py-2 text-red-700 text-xs">ERROR: 10k-fetch exited 1: </td>
               </tr>
             
       </tbody>
@@ -151,7 +186,7 @@
 
   <footer class="mt-8 text-xs text-gray-500 border-t pt-4">
     <p>Reliability Workbench v0.1 · <a href="https://github.com/taiwanfifi/quant" class="text-blue-600 hover:underline">GitHub: taiwanfifi/quant</a></p>
-    <p class="mt-1">Generated from <span class="font-mono">report_golden_1777391394.json</span></p>
+    <p class="mt-1">Generated from <span class="font-mono">report_adversarial_1777391517.json</span></p>
   </footer>
 
 </div>

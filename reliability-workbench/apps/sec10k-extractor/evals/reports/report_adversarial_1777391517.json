@@ -1,0 +1,151 @@
+{
+  "suite": "adversarial",
+  "rules_only": true,
+  "n_cases": 6,
+  "n_ok": 1,
+  "accuracy_avg": 0.0,
+  "cost_total_usd": 0.0,
+  "elapsed_total_ms": 9816,
+  "by_scenario": {
+    "pre-modern-sgml-plaintext": {
+      "total": 1,
+      "ok": 0,
+      "case_ids": [
+        "ADV_LEGACY_SGML_ENVELOPE"
+      ]
+    },
+    "incorporate-by-reference-to-ars": {
+      "total": 1,
+      "ok": 0,
+      "case_ids": [
+        "ADV_EXTERNAL_REF_GHOST"
+      ]
+    },
+    "post-2021-item-6-reserved": {
+      "total": 1,
+      "ok": 0,
+      "case_ids": [
+        "ADV_ITEM6_RESERVED_QUIRK"
+      ]
+    },
+    "html-nbsp-encoded-whitespace": {
+      "total": 1,
+      "ok": 0,
+      "case_ids": [
+        "ADV_NBSP_ENTITY_FLOOD"
+      ]
+    },
+    "non-standard-item-headings": {
+      "total": 1,
+      "ok": 0,
+      "case_ids": [
+        "ADV_NON_STD_TITLES"
+      ]
+    },
+    "item-9c-foreign-inspection-disclosure": {
+      "total": 1,
+      "ok": 0,
+      "case_ids": [
+        "ADV_HFCAA_INSPECTION_9C"
+      ]
+    }
+  },
+  "results": [
+    {
+      "case_id": "ADV_LEGACY_SGML_ENVELOPE",
+      "metadata": {
+        "industry": "Energy",
+        "year": 1994,
+        "format": "plaintext",
+        "scenario": "pre-modern-sgml-plaintext",
+        "synthetic": true,
+        "seed_case": "AAPL_2025",
+        "generated_at": 1777391451.611837
+      },
+      "scores": {
+        "inv_form_type_present": 1.0,
+        "inv_items_unique": 1.0,
+        "inv_spec_fields_present": 1.0,
+        "items_count_in_range": 0.0,
+        "accuracy": 0.0
+      },
+      "primary": 0.0,
+      "n_items": 3,
+      "cost_usd": 0.0,
+      "elapsed_ms": 2547,
+      "confidence": 0.5,
+      "expected": {
+        "must_not_silent_fail": true,
+        "items_count_min": 10,
+        "items_count_max": 15,
+        "may_emit_needs_review": true
+      },
+      "form_type": "10-Q"
+    },
+    {
+      "case_id": "ADV_EXTERNAL_REF_GHOST",
+      "error": "10k-fetch exited 1: ",
+      "metadata": {
+        "industry": "Consumer Staples",
+        "year": 2026,
+        "format": "iXBRL",
+        "scenario": "incorporate-by-reference-to-ars",
+        "synthetic": true,
+        "seed_case": "KO_2026",
+        "generated_at": 1777391451.611874
+      }
+    },
+    {
+      "case_id": "ADV_ITEM6_RESERVED_QUIRK",
+      "error": "10k-fetch exited 1: ",
+      "metadata": {
+        "industry": "Technology",
+        "year": 2026,
+        "format": "iXBRL",
+        "scenario": "post-2021-item-6-reserved",
+        "synthetic": true,
+        "seed_case": "MSFT_2025",
+        "generated_at": 1777391451.611884
+      }
+    },
+    {
+      "case_id": "ADV_NBSP_ENTITY_FLOOD",
+      "error": "10k-fetch exited 1: ",
+      "metadata": {
+        "industry": "Healthcare",
+        "year": 2026,
+        "format": "iXBRL",
+        "scenario": "html-nbsp-encoded-whitespace",
+        "synthetic": true,
+        "seed_case": "PFE_2026",
+        "generated_at": 1777391451.611892
+      }
+    },
+    {
+      "case_id": "ADV_NON_STD_TITLES",
+      "error": "10k-fetch exited 1: ",
+      "metadata": {
+        "industry": "Semiconductors",
+        "year": 2026,
+        "format": "iXBRL",
+        "scenario": "non-standard-item-headings",
+        "synthetic": true,
+        "seed_case": "NVDA_2026",
+        "generated_at": 1777391451.611899
+      }
+    },
+    {
+      "case_id": "ADV_HFCAA_INSPECTION_9C",
+      "error": "10k-fetch exited 1: ",
+      "metadata": {
+        "industry": "Financials",
+        "year": 2026,
+        "format": "iXBRL",
+        "scenario": "item-9c-foreign-inspection-disclosure",
+        "synthetic": true,
+        "seed_case": "BRK-A_2026",
+        "generated_at": 1777391451.611906
+      }
+    }
+  ]
+}
