@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "build-and-release output",
+  "type": "object",
+  "required": ["ok", "repo", "ref", "current_version", "next_version", "categorized", "release_notes_md", "dry_run", "duration_ms", "idempotency_key"],
+  "properties": {
+    "ok": {"type": "boolean"},
+    "repo": {"type": "string"},
+    "ref": {"type": "string"},
+    "current_version": {"type": "string"},
+    "next_version": {"type": "string"},
+    "commits_since_last_tag": {"type": "integer"},
+    "categorized": {
+      "type": "object",
+      "properties": {
+        "features": {"type": "array"},
+        "fixes": {"type": "array"},
+        "other": {"type": "array"}
+      }
+    },
+    "release_notes_md": {"type": "string"},
+    "tag_created": {"type": "boolean"},
+    "tag_pushed": {"type": "boolean"},
+    "artifacts_built": {"type": "array"},
+    "dry_run": {"type": "boolean"},
+    "duration_ms": {"type": "integer"},
+    "idempotency_key": {"type": "string"},
+    "warnings": {"type": "array"},
+    "error_type": {"type": "string"},
+    "error_message": {"type": "string"}
+  }
+}
