@@ -49,8 +49,16 @@ def _check_playwright() -> tuple[bool, str | None]:
 def _build_llm(model_pref: str):
     """Pick an LLM compatible with browser-use's interface."""
     # Gemini path: use ChatGoogle if google API key available; else fallback to ChatBrowserUse
+    # Free path first: cookies-based Gemini (no API key required)
+    if model_pref in ("gemini", "auto", "gemini-cookies", "gemini-3-flash"):
+        try:
+            from packages.llm_router.providers.gemini_for_browser_use import ChatGeminiCookies
+            return ChatGeminiCookies(reset_each_call=False), "gemini-cookies"
+        except Exception:
+            pass
+
     if model_pref in ("gemini", "auto"):
-        # browser-use exposes ChatGoogle for Gemini
+        # browser-use exposes ChatGoogle for Gemini (needs GOOGLE_API_KEY)
         if os.environ.get("GOOGLE_API_KEY"):
             from browser_use.llm import ChatGoogle
             return ChatGoogle(model="gemini-2.5-flash"), "gemini"
