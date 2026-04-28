@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "10k-find-items output",
+  "type": "object",
+  "required": ["ok", "format", "items", "items_unique_count", "parts_unique", "rules_confidence", "needs_llm_fallback"],
+  "properties": {
+    "ok": {"type": "boolean"},
+    "format": {"type": "string"},
+    "extraction_strategy": {"type": "string"},
+    "plaintext_chars": {"type": "integer"},
+    "raw_hash": {"type": "string"},
+    "parts_unique": {"type": "array", "items": {"type": "string"}},
+    "parts_raw_match_count": {"type": "integer"},
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["item_number", "char_offset", "matched_text", "confidence", "pattern_used"],
+        "properties": {
+          "item_number": {"type": "string"},
+          "char_offset": {"type": "integer"},
+          "matched_text": {"type": "string"},
+          "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+          "pattern_used": {"type": "string"}
+        }
+      }
+    },
+    "items_unique_count": {"type": "integer"},
+    "signals": {
+      "type": "object",
+      "properties": {
+        "incorporated_by_reference_count": {"type": "integer"},
+        "reserved_count": {"type": "integer"},
+        "is_amendment_indicator": {"type": "boolean"},
+        "envelope_type": {"type": "string"},
+        "html_entity_quirks": {"type": "boolean"}
+      }
+    },
+    "rules_confidence": {"type": "number", "minimum": 0, "maximum": 1},
+    "needs_llm_fallback": {"type": "boolean"},
+    "fallback_reason": {"type": ["string", "null"]},
+    "elapsed_ms": {"type": "integer"},
+    "error_type": {"type": "string"},
+    "error_message": {"type": "string"}
+  }
+}

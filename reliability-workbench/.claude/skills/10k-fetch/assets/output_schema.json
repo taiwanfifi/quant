@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "10k-fetch output",
+  "type": "object",
+  "required": ["ok", "filing_dir", "primary_doc_path", "raw_hash", "size_bytes", "format_hint", "fetched_at", "from_cache"],
+  "properties": {
+    "ok": {"type": "boolean"},
+    "filing_dir": {"type": "string"},
+    "primary_doc_path": {"type": "string"},
+    "primary_doc_url": {"type": "string"},
+    "raw_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "size_bytes": {"type": "integer", "minimum": 0},
+    "format_hint": {"type": "string", "enum": ["html", "ixbrl", "pem-sgml", "plaintext"]},
+    "fetched_at": {"type": "number"},
+    "from_cache": {"type": "boolean"},
+    "fetch_strategy": {"type": "string"},
+    "error_type": {"type": "string"},
+    "error_message": {"type": "string"}
+  }
+}

@@ -1,0 +1,262 @@
+[
+  {
+    "label": "AAPL 2025",
+    "tag": "modern-healthy",
+    "stages": [
+      {
+        "n": 1,
+        "skill": "10k-fetch",
+        "duration_ms": 94,
+        "validated": true,
+        "key_outputs": {
+          "primary_doc_path": "/Users/william/Downloads/quant/reliability-workbench/_cache/sec_filings/0000320193/0000320193-25-000079/aapl-20250927.htm",
+          "size_bytes": 1520208,
+          "format_hint": "ixbrl",
+          "raw_hash": "sha256:548ae59778cf08ee0...",
+          "from_cache": true
+        }
+      },
+      {
+        "n": 2,
+        "skill": "10k-find-items",
+        "duration_ms": 605,
+        "validated": true,
+        "key_outputs": {
+          "format": "ixbrl",
+          "extraction_strategy": "ixbrl-tags-stripped",
+          "plaintext_chars": 220566,
+          "parts_unique": [
+            "I",
+            "II",
+            "III",
+            "IV"
+          ],
+          "items_unique_count": 23,
+          "items_sample": [
+            "1",
+            "1A",
+            "1B",
+            "1C",
+            "2",
+            "3"
+          ],
+          "rules_confidence": 1.0,
+          "needs_llm_fallback": false,
+          "fallback_reason": null,
+          "signals": {
+            "incorporated_by_reference_count": 12,
+            "reserved_count": 0,
+            "is_amendment_indicator": false,
+            "form_type": "10-K",
+            "form_type_source": "ixbrl-dei",
+            "envelope_type": "modern",
+            "html_entity_quirks": false
+          }
+        }
+      }
+    ],
+    "total_elapsed_ms": 778,
+    "total_cost_usd": 0.0,
+    "trace_id": "tr_sec10k_pipeline_AAPL_2025_19dc8a072ca_e65e3a",
+    "decision": "rules-sufficient",
+    "rules_confidence": 1.0,
+    "not_yet_built": [
+      "10k-confirm-items-llm",
+      "10k-classify-status",
+      "10k-cross-validate-xbrl",
+      "10k-assemble"
+    ]
+  },
+  {
+    "label": "PFE 2026",
+    "tag": "modern-html-quirks",
+    "stages": [
+      {
+        "n": 1,
+        "skill": "10k-fetch",
+        "duration_ms": 0,
+        "validated": true,
+        "key_outputs": {
+          "primary_doc_path": "/Users/william/Downloads/quant/_datasets/sec_10k_seed/PFE/2026/pfe-20251231.htm",
+          "size_bytes": 5222324,
+          "format_hint": "(detected at next stage)",
+          "raw_hash": "...",
+          "from_cache": true
+        }
+      },
+      {
+        "n": 2,
+        "skill": "10k-find-items",
+        "duration_ms": 1646,
+        "validated": true,
+        "key_outputs": {
+          "format": "ixbrl",
+          "extraction_strategy": "ixbrl-tags-stripped",
+          "plaintext_chars": 742216,
+          "parts_unique": [
+            "I",
+            "II",
+            "III",
+            "IV"
+          ],
+          "items_unique_count": 23,
+          "items_sample": [
+            "1",
+            "1A",
+            "1B",
+            "1C",
+            "2",
+            "3"
+          ],
+          "rules_confidence": 1.0,
+          "needs_llm_fallback": false,
+          "fallback_reason": null,
+          "signals": {
+            "incorporated_by_reference_count": 86,
+            "reserved_count": 0,
+            "is_amendment_indicator": false,
+            "form_type": null,
+            "form_type_source": null,
+            "envelope_type": "modern",
+            "html_entity_quirks": false
+          }
+        }
+      }
+    ],
+    "total_elapsed_ms": 1649,
+    "total_cost_usd": 0.0,
+    "trace_id": "tr_sec10k_pipeline_PFE_2026_19dc8a075d5_9dcfae",
+    "decision": "rules-sufficient",
+    "rules_confidence": 1.0,
+    "not_yet_built": [
+      "10k-confirm-items-llm",
+      "10k-classify-status",
+      "10k-cross-validate-xbrl",
+      "10k-assemble"
+    ]
+  },
+  {
+    "label": "Ford 1995",
+    "tag": "pem-sgml-old",
+    "stages": [
+      {
+        "n": 1,
+        "skill": "10k-fetch",
+        "duration_ms": 0,
+        "validated": true,
+        "key_outputs": {
+          "primary_doc_path": "/Users/william/Downloads/quant/_datasets/sec_10k_old/F/1995/0000950124-95-000729.txt",
+          "size_bytes": 445927,
+          "format_hint": "(detected at next stage)",
+          "raw_hash": "...",
+          "from_cache": true
+        }
+      },
+      {
+        "n": 2,
+        "skill": "10k-find-items",
+        "duration_ms": 114,
+        "validated": true,
+        "key_outputs": {
+          "format": "pem-sgml",
+          "extraction_strategy": "pem-sgml-doc-text-block",
+          "plaintext_chars": 232954,
+          "parts_unique": [
+            "I",
+            "II",
+            "III",
+            "IV"
+          ],
+          "items_unique_count": 15,
+          "items_sample": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "4A",
+            "5"
+          ],
+          "rules_confidence": 1.0,
+          "needs_llm_fallback": false,
+          "fallback_reason": null,
+          "signals": {
+            "incorporated_by_reference_count": 10,
+            "reserved_count": 0,
+            "is_amendment_indicator": false,
+            "form_type": "10-K",
+            "form_type_source": "sgml-type-tag",
+            "envelope_type": "pem-sgml-1990s",
+            "html_entity_quirks": false
+          }
+        }
+      }
+    ],
+    "total_elapsed_ms": 118,
+    "total_cost_usd": 0.0,
+    "trace_id": "tr_sec10k_pipeline_Ford_1995_19dc8a07c47_91740c",
+    "decision": "rules-sufficient",
+    "rules_confidence": 1.0,
+    "not_yet_built": [
+      "10k-confirm-items-llm",
+      "10k-classify-status",
+      "10k-cross-validate-xbrl",
+      "10k-assemble"
+    ]
+  },
+  {
+    "label": "JPM 10-K/A 1999",
+    "tag": "amendment-only-exhibit",
+    "stages": [
+      {
+        "n": 1,
+        "skill": "10k-fetch",
+        "duration_ms": 0,
+        "validated": true,
+        "key_outputs": {
+          "primary_doc_path": "/Users/william/Downloads/quant/_datasets/sec_10k_old/JPM/1999/0000950123-99-006055.txt",
+          "size_bytes": 248759,
+          "format_hint": "(detected at next stage)",
+          "raw_hash": "...",
+          "from_cache": true
+        }
+      },
+      {
+        "n": 2,
+        "skill": "10k-find-items",
+        "duration_ms": 98,
+        "validated": true,
+        "key_outputs": {
+          "format": "pem-sgml",
+          "extraction_strategy": "pem-sgml-doc-text-block",
+          "plaintext_chars": 139896,
+          "parts_unique": [],
+          "items_unique_count": 0,
+          "items_sample": [],
+          "rules_confidence": 0.0,
+          "needs_llm_fallback": true,
+          "fallback_reason": "no PART found; items_unique=0 (very low); amendment detected (10-K/A)",
+          "signals": {
+            "incorporated_by_reference_count": 0,
+            "reserved_count": 0,
+            "is_amendment_indicator": true,
+            "form_type": "10-K/A",
+            "form_type_source": "sgml-type-tag",
+            "envelope_type": "pem-sgml-1990s",
+            "html_entity_quirks": false
+          }
+        }
+      }
+    ],
+    "total_elapsed_ms": 101,
+    "total_cost_usd": 0.0,
+    "trace_id": "tr_sec10k_pipeline_JPM_10-K_A_1999_19dc8a07cbd_18e15d",
+    "decision": "would-escalate-to-llm",
+    "rules_confidence": 0.0,
+    "not_yet_built": [
+      "10k-confirm-items-llm",
+      "10k-classify-status",
+      "10k-cross-validate-xbrl",
+      "10k-assemble"
+    ]
+  }
+]

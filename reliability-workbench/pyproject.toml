@@ -1,0 +1,57 @@
+[project]
+name = "reliability-workbench"
+version = "0.1.0"
+description = "Unified platform for 3 AI Coding Test tasks: CI Skills, Browser Agent, SEC 10-K extractor"
+requires-python = ">=3.11"
+authors = [{ name = "William", email = "taiwanfifi@gmail.com" }]
+
+dependencies = [
+    "anthropic>=0.40.0",        # Claude SDK
+    "curl_cffi>=0.7.0",         # for Gemini cookies session
+    "fastapi>=0.115.0",          # gateway service
+    "uvicorn[standard]>=0.30.0", # ASGI server
+    "pydantic>=2.9.0",           # schemas
+    "beautifulsoup4>=4.12.0",    # HTML parsing
+    "lxml>=5.0.0",               # fast HTML/XML
+    "pyyaml>=6.0",               # SKILL.md frontmatter
+    "rich>=13.0.0",              # terminal output
+]
+
+[project.optional-dependencies]
+browser = [
+    "playwright>=1.48.0",        # Task 2
+]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.24.0",
+    "ruff>=0.7.0",
+    "mypy>=1.13.0",
+]
+
+[tool.uv.workspace]
+members = ["packages/*", "apps/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests", "packages", "apps"]
+python_files = ["test_*.py", "*_test.py"]
+asyncio_mode = "auto"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "N", "UP"]
+ignore = ["E501"]  # long lines OK in some places (prompts)
+
+[tool.mypy]
+python_version = "3.11"
+strict_optional = true
+warn_unused_ignores = true
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["packages", "apps"]

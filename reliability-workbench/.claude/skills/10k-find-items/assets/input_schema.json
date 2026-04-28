@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "10k-find-items input",
+  "type": "object",
+  "oneOf": [
+    {"required": ["filing_path"]},
+    {"required": ["raw_bytes_b64"]}
+  ],
+  "properties": {
+    "filing_path": {"type": "string", "minLength": 1},
+    "raw_bytes_b64": {"type": "string"}
+  }
+}

@@ -1,0 +1,64 @@
+# Large data — not committed
+_datasets/
+_references/
+_cache/
+_traces/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Type checking
+.mypy_cache/
+.ruff_cache/
+
+# IDE
+.vscode/
+.idea/
+.DS_Store
+
+# Env / secrets — never commit
+.env
+.env.local
+cookies*.txt
+*.cookies
+*.db
+*.sqlite
+
+# Build
+build/
+dist/
+*.whl
+
+# Logs
+logs/
+*.log
+
+# IDE-opened scratch
+prompt.md
+prompt2.md
+
+# Old AI training artifacts (not relevant to interview project)
+benchmark_agent.py
+check_run25_sft.py
+*.safetensors
+checkpoints/
+d16_results/
+d32_backup/
+d33_backup/
+ContinuousAgent/
+CluadeCode/
+CarbonStack/
+AMD/
+check/
+1.md
+2.md
+concept.md

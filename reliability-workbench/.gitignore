@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Type checking
+.mypy_cache/
+.ruff_cache/
+
+# IDE
+.vscode/
+.idea/
+.DS_Store
+
+# Local data (lives in repo root for sandbox, gitignored)
+_datasets/
+_traces/
+_cache/
+*.db
+*.sqlite
+
+# Env / secrets
+.env
+.env.local
+cookies*.txt
+*.cookies
+
+# Build
+build/
+dist/
+*.whl
+
+# Logs
+logs/
+*.log
