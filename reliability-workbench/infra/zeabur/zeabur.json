@@ -1,0 +1,21 @@
+{
+  "name": "reliability-workbench",
+  "services": [
+    {
+      "name": "gateway",
+      "type": "docker",
+      "dockerfile": "apps/gateway/Dockerfile",
+      "port": 8000,
+      "env": {
+        "SEC_USER_AGENT": "${SEC_USER_AGENT}",
+        "ANTHROPIC_API_KEY": "${ANTHROPIC_API_KEY}",
+        "GEMINI_COOKIES_FILE": "${GEMINI_COOKIES_FILE}",
+        "PORT": "8000"
+      },
+      "healthcheck": {
+        "path": "/healthz",
+        "interval_s": 30
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "dependency-audit input",
+  "type": "object",
+  "required": ["repo_url"],
+  "properties": {
+    "repo_url": {"type": "string", "minLength": 5},
+    "ref": {"type": "string", "default": "main"},
+    "severity_threshold": {
+      "type": "string",
+      "enum": ["critical", "high", "moderate", "low"],
+      "default": "moderate"
+    },
+    "max_runtime_s": {"type": "integer", "minimum": 10, "maximum": 600, "default": 120}
+  }
+}

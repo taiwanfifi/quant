@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "dependency-audit output",
+  "type": "object",
+  "required": ["ok", "repo", "ref", "tools_used", "summary", "duration_ms", "idempotency_key"],
+  "properties": {
+    "ok": {"type": "boolean"},
+    "repo": {"type": "string"},
+    "ref": {"type": "string"},
+    "language": {"type": "string"},
+    "tools_used": {"type": "array", "items": {"type": "string"}},
+    "vulnerabilities": {"type": "array"},
+    "summary": {"type": "object"},
+    "above_threshold": {"type": "integer"},
+    "duration_ms": {"type": "integer"},
+    "idempotency_key": {"type": "string"},
+    "warnings": {"type": "array"},
+    "error_type": {"type": "string"},
+    "error_message": {"type": "string"}
+  }
+}
