@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "10k-extract-structured input",
+  "type": "object",
+  "oneOf": [
+    {"required": ["cik", "accession"]},
+    {"required": ["file_url"]}
+  ],
+  "properties": {
+    "cik": {"type": "string"},
+    "accession": {"type": "string"},
+    "file_url": {"type": "string"},
+    "always_run_llm": {"type": "boolean", "default": false},
+    "resolve_incorporation": {"type": "boolean", "default": true},
+    "max_chars_to_llm": {"type": "integer", "default": 80000},
+    "model_preference": {"type": "string", "default": "auto"},
+    "absolute_deadline_unix": {"type": ["number", "null"]}
+  }
+}

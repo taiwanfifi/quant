@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "10k-confirm-items-llm input",
+  "type": "object",
+  "required": ["filing_path"],
+  "properties": {
+    "filing_path": {"type": "string", "minLength": 1},
+    "rules_output": {"type": "object"},
+    "model_preference": {
+      "type": "string",
+      "enum": ["auto", "claude", "gemini", "claude-haiku-4-5", "claude-sonnet-4-6", "claude-opus-4-7", "gemini-3-flash"],
+      "default": "auto"
+    },
+    "max_chars_to_llm": {"type": "integer", "minimum": 5000, "maximum": 500000, "default": 80000},
+    "absolute_deadline_unix": {"type": ["number", "null"]}
+  }
+}

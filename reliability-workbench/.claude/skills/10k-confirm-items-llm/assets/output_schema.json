@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "10k-confirm-items-llm output",
+  "type": "object",
+  "required": ["ok", "items", "items_total", "status_distribution", "model_used", "elapsed_ms"],
+  "properties": {
+    "ok": {"type": "boolean"},
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["part", "item_number", "item_title", "status", "confidence", "provenance"],
+        "properties": {
+          "part": {"type": "string", "enum": ["I", "II", "III", "IV"]},
+          "item_number": {"type": "string"},
+          "item_title": {"type": "string"},
+          "char_offset": {"type": ["integer", "null"]},
+          "char_range_estimated": {"type": ["array", "null"]},
+          "status": {
+            "type": "string",
+            "enum": ["extracted", "incorporated_by_reference", "not_applicable", "reserved"]
+          },
+          "content_text_preview": {"type": "string"},
+          "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+          "provenance": {"type": "object"}
+        }
+      }
+    },
+    "items_total": {"type": "integer"},
+    "status_distribution": {"type": "object"},
+    "model_used": {"type": "string"},
+    "tokens_in": {"type": "integer"},
+    "tokens_out": {"type": "integer"},
+    "cost_usd": {"type": "number"},
+    "elapsed_ms": {"type": "integer"},
+    "fallback_chain": {"type": "array", "items": {"type": "string"}},
+    "warnings": {"type": "array"},
+    "error_type": {"type": "string"},
+    "error_message": {"type": "string"}
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "10k-extract-structured output",
+  "type": "object",
+  "required": ["ok", "filing", "items", "summary", "stages"],
+  "properties": {
+    "ok": {"type": "boolean"},
+    "trace_id": {"type": "string"},
+    "filing": {"type": "object"},
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["part", "item_number", "item_title", "content_text", "status", "confidence", "provenance"],
+        "properties": {
+          "part": {"type": "string", "enum": ["I", "II", "III", "IV"]},
+          "item_number": {"type": "string"},
+          "item_title": {"type": "string"},
+          "content_text": {"type": ["string", "null"]},
+          "char_range": {"type": ["array", "null"]},
+          "status": {
+            "type": "string",
+            "enum": ["extracted", "incorporated_by_reference", "not_applicable", "reserved"]
+          },
+          "confidence": {"type": "number"},
+          "provenance": {"type": "object"}
+        }
+      }
+    },
+    "summary": {"type": "object"},
+    "stages": {"type": "array"},
+    "error_type": {"type": "string"},
+    "error_message": {"type": "string"}
+  }
+}
